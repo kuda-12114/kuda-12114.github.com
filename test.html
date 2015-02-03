@@ -17,24 +17,26 @@
     <![endif]-->
   </head>
   <body>
-  	<div class="dropdown">
-  	  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-  		page
-  		  <span class="caret"></span>
-  	  </button>
-  	  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-  		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">a</a></li>
-  		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">b</a></li>
-  		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">c</a></li>
-  		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">d</a></li>
-  	  </ul>
-  	</div>
+    <input>
 
-    <h1>Hello, world!</h1>
+  	<button class="add btn btn-primary">Add</button>
+
+    <div class="list"></div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('.add').on('click', function() {
+        var input = $('input').val()
+        $('input').val('')
+        $('.list').append(input + '<br>');
+        });
+      });
+    </script>
+    <a class="twitter-timeline" href="https://twitter.com/kuda_rna" data-widget-id="562531305292705792">@kuda_rnaさんのツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </body>
 </html>
